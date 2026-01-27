@@ -1,225 +1,279 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Charl'attend</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Water+Brush&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Water+Brush&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-    <link rel='stylesheet' src='main.css' />
+    <link rel="stylesheet" src="main.css" />
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
+      html {
+        scroll-behavior: smooth;
+      }
 
-        body {
-            background-image: url('img/texture_bg.jpg');
-            font-family: "Merriweather Sans", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            color: burlywood;
-        }
+      body {
+        background-image: url("img/texture_bg.jpg");
+        font-family: "Merriweather Sans", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: burlywood;
+      }
 
-        .water-brush {
-            font-family: "Water Brush", cursive;
-        }
+      .water-brush {
+        font-family: "Water Brush", cursive;
+      }
 
-        main {
-            z-index: 100;
-        }
+      main {
+        z-index: 100;
+      }
 
-        section .content {
-            text-align: center;
-        }
+      section .content {
+        text-align: center;
+      }
 
-        section#s1 i, section#s3 i {
-            font-size: 3rem;
-            transition: font-size 0.2s linear;
-        }
+      section#s1 i,
+      section#s3 i {
+        font-size: 3rem;
+        transition: font-size 0.2s linear;
+      }
 
-        section#s1 i:hover, section#s3 i:hover {
-            font-size: 3.2rem;
-        }
+      section#s1 i:hover,
+      section#s3 i:hover {
+        font-size: 3.2rem;
+      }
 
-        /* Chrome, Edge, Safari */
-        ::-webkit-scrollbar {
-            width: 4px;
-        }
+      /* Chrome, Edge, Safari */
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
 
-        ::-webkit-scrollbar-track {
-            background: transparent;
-        }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
 
-        ::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.2);
-            /* subtle */
-            border-radius: 9999px;
-        }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        /* subtle */
+        border-radius: 9999px;
+      }
 
-        /* Firefox */
-        * {
-            scrollbar-width: thin;
-            scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
-        }
+      /* Firefox */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+      }
 
-        /* Hide scrollbar for Webkit */
-        [data-slider="track"]::-webkit-scrollbar {
-            display: none;
-        }
+      /* Hide scrollbar for Webkit */
+      [data-slider="track"]::-webkit-scrollbar {
+        display: none;
+      }
 
-        /* Prevent text selection while dragging */
-        [data-slider="track"] {
-            user-select: none;
-            -webkit-user-select: none;
-        }
+      /* Prevent text selection while dragging */
+      [data-slider="track"] {
+        user-select: none;
+        -webkit-user-select: none;
+      }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const track = document.querySelector('[data-slider="track"]');
-            const prev = document.querySelector('[data-slider="prev"]');
-            const next = document.querySelector('[data-slider="next"]');
+    <script></script>
+  </head>
 
-            const slideWidth = () => track.offsetWidth;
-
-            prev.addEventListener("click", () => {
-                track.scrollBy({
-                    left: -slideWidth(),
-                    behavior: "smooth"
-                });
-            });
-
-            next.addEventListener("click", () => {
-                track.scrollBy({
-                    left: slideWidth(),
-                    behavior: "smooth"
-                });
-            });
-
-            // Optional: update on resize for responsiveness
-            window.addEventListener("resize", () => {});
-        });
-    </script>
-</head>
-
-<body>
-
+  <body>
     <!-- HEADER -->
-    <header class="fixed top-0 left-0 w-full z-50 h-16 flex items-center select-none pointer-events-none">
-        <img src='img/top_left_corner.webp'>
+    <header
+      class="fixed top-0 left-0 w-full z-50 h-16 flex items-center select-none pointer-events-none"
+    >
+      <img src="img/top_left_corner.webp" />
     </header>
 
     <!-- FOOTER -->
     <footer class="fixed bottom-0 left-0 w-full z-50 h-16 flex items-center">
-        <nav class="max-w-6xl mx-auto w-full flex items-center justify-between px-6">
-            <ul class="flex gap-6 text-sm font-medium justify-center w-full flex items-center">
-                <li><a href="#s1">Home</a></li>
-                <li><a href="#s2">Écouter</a></li>
-                <li><a href="#s3">Live</a></li>
-                <li><a href="#s4">Le groupe</a></li>
-            </ul>
-        </nav>
+      <nav
+        class="max-w-6xl mx-auto w-full flex items-center justify-between px-6"
+      >
+        <ul
+          class="flex gap-6 text-sm font-medium justify-center w-full flex items-center"
+        >
+          <li><a href="#s1">Home</a></li>
+          <li><a href="#s2">Écouter</a></li>
+          <li><a href="#s3">Live</a></li>
+          <li><a href="#s4">Le groupe</a></li>
+        </ul>
+      </nav>
     </footer>
 
     <!-- MAIN: Fixed between header and footer -->
-    <main class="fixed top-16 bottom-16 left-0 right-0 overflow-y-auto snap-y snap-mandatory">
+    <main
+      class="fixed top-16 bottom-16 left-0 right-0 overflow-y-auto snap-y snap-mandatory"
+    >
+      <!-- Each section fills the available space between header & footer -->
+      <section
+        id="s1"
+        class="snap-start h-full flex items-center justify-center"
+      >
+        <div class="content items-center px-8 mx-auto mt-12 max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl">
+          <h1 class="text-6xl font-bold water-brush">Charl'attend</h1>
+          <p class="text-6xl sep water-brush">-</p>
+          <h2 class="text-4xl font-bold">EN VRAC</h2>
+          <p class="text-2xl">
+            Notre premier EP est disponible sur les platformes
+          </p>
+          <nav class="flex gap-4 w-full justify-center">
+            <a
+              href="#"
+              class="w-12 h-12 rounded-full flex items-center justify-center"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
 
-        <!-- Each section fills the available space between header & footer -->
-        <section id="s1"
-            class="snap-start h-full flex items-center justify-center">
-            <div class='content items-center px-8'>
-                <h1 class="text-6xl font-bold water-brush">Charl'attend</h1>
-                <p class='text-6xl sep water-brush'>-</p>
-                <h2 class="text-4xl font-bold">EN VRAC</h2>
-                </br>
-                <p class="text-2xl">Notre premier EP est disponible sur les platformes</p>
-                </br>
-                <nav class="flex gap-4 w-full justify-center">
-                    <a href="#" class=" w-12 h-12 rounded-full flex items-center justify-center">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-
-                    <a href="#" class=" w-12 h-12 rounded-full flex items-center justify-center">
-                        <i class="fa-brands fa-spotify"></i>
-                    </a>
-                </nav>
-            </div>
-        </section>
-                <section
+            <a
+              href="#"
+              class="w-12 h-12 rounded-full flex items-center justify-center"
+            >
+              <i class="fa-brands fa-spotify"></i>
+            </a>
+          </nav>
+        </div>
+      </section>
+      <section
         id="s2"
         class="snap-start min-h-screen flex items-center justify-center"
-        >
-        <div class="content w-full max-w-none px-8">
-            <h2 class="text-6xl font-bold water-brush text-center">
-            Écouter
-            </h2>
+      >
+        <div class="content max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl px-8">
+          <h2 class="text-6xl font-bold water-brush text-center">Écouter</h2>
 
-            <p class="text-5xl sep water-brush text-center">-</p>
+          <p class="text-5xl sep water-brush text-center">-</p>
 
-            <!-- embeds wrapper controls width -->
+          <!-- embeds wrapper controls width -->
+          <div
+            class="mx-auto mt-12 grid gap-8 max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl"
+          >
+            <iframe
+              class="w-full"
+              width="100%"
+              height="166"
+              scrolling="no"
+              frameborder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2250376313&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+            ></iframe>
+
+            <iframe
+              class="w-full"
+              width="100%"
+              height="166"
+              scrolling="no"
+              frameborder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2250376304&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+            ></iframe>
             <div
-            class="mx-auto mt-12 grid gap-8
-                    max-w-xl
-                    md:max-w-3xl
-                    lg:max-w-5xl
-                    xl:max-w-6xl"
+              style="
+                font-size: 10px;
+                color: #cccccc;
+                line-break: anywhere;
+                word-break: normal;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-family:
+                  Interstate,
+                  Lucida Grande,
+                  Lucida Sans Unicode,
+                  Lucida Sans,
+                  Garuda,
+                  Verdana,
+                  Tahoma,
+                  sans-serif;
+                font-weight: 100;
+              "
             >
             <iframe
-                class="w-full h-30 border-0"
-                scrolling="no"
-                allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=TRACK_URL_1"
+              class="w-full"
+              width="100%"
+              height="166"
+              scrolling="no"
+              frameborder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2250376307&color=%23242434&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
             ></iframe>
-
-            <iframe
-                class="w-full h-30 border-0"
-                scrolling="no"
-                allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=TRACK_URL_2"
-            ></iframe>
-
-            <iframe
-                class="w-full h-30 border-0"
-                scrolling="no"
-                allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=TRACK_URL_3"
-            ></iframe>
+            <div
+              style="
+                font-size: 10px;
+                color: #cccccc;
+                line-break: anywhere;
+                word-break: normal;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-family:
+                  Interstate,
+                  Lucida Grande,
+                  Lucida Sans Unicode,
+                  Lucida Sans,
+                  Garuda,
+                  Verdana,
+                  Tahoma,
+                  sans-serif;
+                font-weight: 100;
+              "
+            >
+              <a
+                href="https://soundcloud.com/charl-attend"
+                title="Charl&#x27;Attend"
+                target="_blank"
+                style="color: #cccccc; text-decoration: none"
+                >Charl&#x27;Attend</a
+              >
+              ·
+              <a
+                href="https://soundcloud.com/charl-attend/pensees-nocturnes-1"
+                title="Pensées nocturnes"
+                target="_blank"
+                style="color: #cccccc; text-decoration: none"
+                >Pensées nocturnes</a
+              >
             </div>
+          </div>
         </div>
-        </section>
-        <section id="s3" 
-        class="snap-start h-full flex items-center justify-center">
-            <div class='content w-full items-center px-8'>
-                <h2 class="text-6xl font-bold water-brush">
-                Concerts
-                </h2>
-                <p class='text-5xl sep water-brush'>-</p>
-                <ul class="space-y-6">
+      </section>
+      <section
+        id="s3"
+        class="snap-start h-full flex items-center justify-center"
+      >
+        <div class="content max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl items-center px-8">
+          <h2 class="text-6xl font-bold water-brush">Concerts</h2>
+          <p class="text-5xl sep water-brush">-</p>
+          <ul class="space-y-6">
+            <li class="flex justify-between items-start border-b pb-4">
+              <div>
+                <p class="text-sm">2026</p>
+                <p class="font-medium">Marseille</p>
+                <p class="text-sm">Espace Julien</p>
+              </div>
+              <span class="text-sm">26 Mai</span>
+            </li>
 
-                <li class="flex justify-between items-start border-b pb-4">
-                    <div>
-                    <p class="text-sm">2026</p>
-                    <p class="font-medium">Marseille</p>
-                    <p class="text-sm">Espace Julien</p>
-                    </div>
-                    <span class="text-sm">26 Mai</span>
-                </li>
-                
-                <li class="flex justify-between items-start border-b pb-4">
-                    <div>
-                    <p class="text-sm">2026</p>
-                    <p class="font-medium">Fuveau</p>
-                    <p class="text-sm">Fête de la musique</p>
-                    </div>
-                    <span class="text-sm">21 Juin</span>
-                </li>
-                <!--
+            <li class="flex justify-between items-start border-b pb-4">
+              <div>
+                <p class="text-sm">2026</p>
+                <p class="font-medium">Fuveau</p>
+                <p class="text-sm">Fête de la musique</p>
+              </div>
+              <span class="text-sm">21 Juin</span>
+            </li>
+            <!--
                 <li class="flex justify-between items-start border-b border-neutral-800 pb-4">
                     <div>
                     <p class="text-sm text-neutral-400">2025</p>
@@ -229,30 +283,39 @@
                     <span class="text-sm">22 Oct</span>
                 </li>
                 -->
+          </ul>
+        </div>
+      </section>
+      <section
+        id="s4"
+        class="snap-start h-full flex items-center justify-center"
+      >
+        <div class="content items-center px-8 max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl">
+          <h2 class="text-6xl font-bold water-brush">Le groupe</h2>
+          <p class="text-5xl sep water-brush">-</p>
+          <p class="text-1xl mb-10">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Voluptatem, enim? Illo voluptatibus ut recusandae assumenda facere
+            reprehenderit aliquam maiores? Recusandae eaque voluptate, dolorem
+            ex atque accusantium quam doloremque debitis. Modi!
+          </p>
+          <nav class="flex gap-4 w-full justify-center">
+            <a
+              href="#"
+              class="w-12 h-12 rounded-full flex items-center justify-center"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
 
-                </ul>
-
-            </div>
-        </section>
-        <section id="s4" class="snap-start h-full flex items-center justify-center">
-            <div class='content items-center px-8'>
-                <h2 class="text-6xl font-bold water-brush">Le groupe</h2>
-                <p class='text-5xl sep water-brush'>-</p>
-                <p class='text-1xl mb-10'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, enim? Illo voluptatibus ut recusandae assumenda facere reprehenderit aliquam maiores? Recusandae eaque voluptate, dolorem ex atque accusantium quam doloremque debitis. Modi!</p>
-                <nav class="flex gap-4 w-full justify-center">
-                    <a href="#" class=" w-12 h-12 rounded-full flex items-center justify-center">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-
-                    <a href="#" class=" w-12 h-12 rounded-full flex items-center justify-center">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </nav>
-            </div>
-        </section>
-
+            <a
+              href="#"
+              class="w-12 h-12 rounded-full flex items-center justify-center"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </nav>
+        </div>
+      </section>
     </main>
-
-</body>
-
+  </body>
 </html>
