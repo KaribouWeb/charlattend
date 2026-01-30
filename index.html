@@ -30,7 +30,6 @@
         font-style: normal;
         color: burlywood;
       }
-
       .water-brush {
         font-family: "Water Brush", cursive;
       }
@@ -41,19 +40,23 @@
 
       section .content {
         text-align: center;
+        width:100%;
       }
 
       section#s1 i,
-      section#s3 i {
+      section#s4 i {
         font-size: 3rem;
         transition: font-size 0.2s linear;
       }
 
       section#s1 i:hover,
-      section#s3 i:hover {
+      section#s4 i:hover {
         font-size: 3.2rem;
       }
-
+      
+      section#s3 li{
+        border-color:burlywood;
+      }
       /* Chrome, Edge, Safari */
       ::-webkit-scrollbar {
         width: 4px;
@@ -109,6 +112,22 @@
           <li><a href="#s2">Écouter</a></li>
           <li><a href="#s3">Live</a></li>
           <li><a href="#s4">Le groupe</a></li>
+          <li><a
+              href="https://www.facebook.com/CharlesAttendOfficiel"
+              target="_blank"
+              class=""
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+        </li><li>
+            <a
+              href="https://www.instagram.com/charlattendofficiel"
+              target="_blank"
+              class=""
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+        </li>
         </ul>
       </nav>
     </footer>
@@ -126,22 +145,38 @@
           <h1 class="text-6xl font-bold water-brush">Charl'attend</h1>
           <p class="text-6xl sep water-brush">-</p>
           <h2 class="text-4xl font-bold">EN VRAC</h2>
-          <p class="text-2xl">
+          <p class="text-2xl mt-8 mb-8">
             Notre premier EP est disponible sur les platformes
           </p>
           <nav class="flex gap-4 w-full justify-center">
             <a
-              href="#"
+              href="https://music.youtube.com/playlist?list=OLAK5uy_lRjgW5qKejr_7XXXNzZdZdk8qsA36Axkw&si=YhSeiqrkn8VjLmDU"
+              target="_blank"
               class="w-12 h-12 rounded-full flex items-center justify-center"
             >
               <i class="fa-brands fa-youtube"></i>
             </a>
 
             <a
-              href="#"
+              href="https://open.spotify.com/album/17qCn9ci94GUwcctYaLZxo?si=xRU48ywpTvKkZ94zfX7P4Q"
+              target="_blank"
               class="w-12 h-12 rounded-full flex items-center justify-center"
             >
               <i class="fa-brands fa-spotify"></i>
+            </a>
+            <a
+              href="https://music.apple.com/fr/album/en-vrac-ep/1867202088"
+              target="_blank"
+              class="w-12 h-12 rounded-full flex items-center justify-center"
+            >
+              <i class="fa-brands fa-itunes"></i>
+            </a>
+            <a
+              href="https://link.deezer.com/s/32bOHaTI8YQ2H6TCpXUML"
+              target="_blank"
+              class="w-12 h-12 rounded-full flex items-center justify-center"
+            >
+              <i class="fa-brands fa-deezer"></i>
             </a>
           </nav>
         </div>
@@ -157,7 +192,7 @@
 
           <!-- embeds wrapper controls width -->
           <div
-            class="mx-auto mt-12 grid gap-8 max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl"
+            class="grid gap-8"
           >
             <iframe
               class="w-full"
@@ -166,7 +201,7 @@
               scrolling="no"
               frameborder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2250376313&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2250376313&color=%23242434&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
             ></iframe>
 
             <iframe
@@ -176,7 +211,7 @@
               scrolling="no"
               frameborder="no"
               allow="autoplay"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2250376304&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2250376304&color=%23242434&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
             ></iframe>
             <div
               style="
@@ -208,43 +243,6 @@
               allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2250376307&color=%23242434&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
             ></iframe>
-            <div
-              style="
-                font-size: 10px;
-                color: #cccccc;
-                line-break: anywhere;
-                word-break: normal;
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                font-family:
-                  Interstate,
-                  Lucida Grande,
-                  Lucida Sans Unicode,
-                  Lucida Sans,
-                  Garuda,
-                  Verdana,
-                  Tahoma,
-                  sans-serif;
-                font-weight: 100;
-              "
-            >
-              <a
-                href="https://soundcloud.com/charl-attend"
-                title="Charl&#x27;Attend"
-                target="_blank"
-                style="color: #cccccc; text-decoration: none"
-                >Charl&#x27;Attend</a
-              >
-              ·
-              <a
-                href="https://soundcloud.com/charl-attend/pensees-nocturnes-1"
-                title="Pensées nocturnes"
-                target="_blank"
-                style="color: #cccccc; text-decoration: none"
-                >Pensées nocturnes</a
-              >
-            </div>
           </div>
         </div>
       </section>
@@ -294,22 +292,19 @@
           <h2 class="text-6xl font-bold water-brush">Le groupe</h2>
           <p class="text-5xl sep water-brush">-</p>
           <p class="text-1xl mb-10">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Voluptatem, enim? Illo voluptatibus ut recusandae assumenda facere
-            reprehenderit aliquam maiores? Recusandae eaque voluptate, dolorem
-            ex atque accusantium quam doloremque debitis. Modi!
+            Fruit de nombreux lendemains de soirées, Charl’attend c’est Antoine,  Charles, Loïc, Marc & Marion, 5 amis aux multiples influences musicales. De la chanson française au punk, de l’apéro à l’intime, Charl’attend vous emmène le temps de quelques chansons dans  l’ivresse de leur univers mélodique
           </p>
           <nav class="flex gap-4 w-full justify-center">
             <a
               href="#"
-              class="w-12 h-12 rounded-full flex items-center justify-center"
+              class="w-24 h-24 rounded-full flex items-center justify-center"
             >
               <i class="fa-brands fa-facebook"></i>
             </a>
 
             <a
               href="#"
-              class="w-12 h-12 rounded-full flex items-center justify-center"
+              class="w-24 h-24 rounded-full flex items-center justify-center"
             >
               <i class="fa-brands fa-instagram"></i>
             </a>
